@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Steve Place, Web Producer, Developer, Designer, Photographer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Steve Place">
+<meta name="zipcode" content="94610"> 
+<meta name="robots" content="all">
+<meta name="keywords" content="web design, wordpress design, php development, oakland web designer, oakland web design, bay area web design"> 
+<meta name="description" content="Front-End design &amp; development for cool things like Wordpress."> 
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+<link href="assets/css/docs.css" rel="stylesheet">
+<link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+<link rel="shortcut icon" href="assets/ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+<script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-4692319-14']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+<style>
+.modal-body p {font-size:1.0em;line-height:1.0em;}
+label.error {display:none !important;}
+/* fix modal position for 480px devices */
+@media (max-width: 480px) 
+{
+    .modal.fade.in {
+        top: 10px;
+  }
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript">
+ $(document).ready(function () {
+   $("img").tooltip({
+	 'selector': '',
+	 'placement': 'top'
+   });
+ });
+</script>
+
+</head>
+<body>
+<div class="container-fluid">
+<header class="jumbotron masthead">
+  	<div class="inner">
+  		<h1>STEVE PLACE</h1>
+    	<p>Front-End design &amp; development for cool things like Wordpress.</p>
+    	<p class="download-info">
+    		<a class="btn btn-primary btn-large" data-toggle="modal" href="#quote-modal">Get a Quote</a>
+    		<a class="btn btn-large" data-toggle="modal" href="#support-modal">Support Request</a>
+    	</p>
+    	<div class="modal hide fade" id="quote-modal">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">×</button>
+				<h3>Get a Quote</h3>
+			</div>
+			<div class="modal-body" style="text-align:center;">
+				<form id="get-a-quote" action="process-quote.php" method="POST">
+					<div class="control-group">
+						<div class="control">
+							<input type="text" class="" name="name" id="name" placeholder="Your Name">
+						</div>
+					</div>
+					<div class="control-group">
+						<div class="control">
+							<input type="text" class="" name="email" id="email" placeholder="Your Email">
+						</div>
+					</div>
+					<div class="control-group hidden-phone">
+						<div class="control">
+							<select name="subject" id="subject">
+								<option value=>What are you looking for?</option>
+								<option value="A new website">A new website</option>
+								<option value="Wordpress help">Wordpress help</option>
+								<option value="Database work">Database work</option>
+								<option value="A redesign of an existing website">A redesign of an existing website</option>
+								<option value="Other">Other</option>
+							</select>
+						</div>
+					</div>
+					<div class="control-group">
+						<div class="control">
+							<textarea name="message" id="message" placeholder="Your Message"></textarea>
+						</div>
+					</div>
+			</div>
+			<div class="modal-footer">
+				<input type="submit" value="Submit" class="btn btn-primary" id="submit-quote">
+				</form>
+			</div>
+		</div>
+		<div class="modal hide fade" id="support-modal">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">×</button>
+				<h3>Support Request</h3>
+			</div>
+			<div class="modal-body" style="text-align:center;">
+				<p>Please use the form below to submit a support ticket.</p>
+				<p>If you require immediate assistance, please call <strong>(610) 762-1473</strong>.</p>
+				<form id="support-request" action="process-support.php" method="POST">
+					<div class="control-group">
+						<div class="control">
+							<input type="text" class="" name="fname" id="fname" placeholder="First Name">
+						</div>
+					</div>
+					<div class="control-group">
+						<div class="control">
+							<input type="text" class="" name="lname" id="lname" placeholder="Last Name">
+						</div>
+					</div>
+					<div class="control-group">
+						<div class="control">
+							<input type="text" class="" name="email" id="email" placeholder="Email">
+						</div>
+					</div>
+					<div class="control-group">
+						<div class="control">
+							<input type="text" class="" name="phone" id="phone" placeholder="Phone">
+						</div>
+					</div>
+					<div class="control-group">
+						<div class="control">
+							<input type="text" class="" name="company" id="company" placeholder="Company Name">
+						</div>
+					</div>
+					<div class="control-group">
+						<div class="control">
+							<textarea name="message" id="message" placeholder="Describe the problem in detail"></textarea>
+						</div>
+					</div>
+			</div>
+			<div class="modal-footer">
+				<input type="submit" value="Submit" class="btn btn-primary" id="submit-support">
+				</form>
+			</div>
+		</div>
+  	</div>
+  	<div class="bs-links">
+    	<ul class="quick-links">
+      		<li><a href="mailto:steven.place@gmail.com">Email</a></li>
+      		<li><a href="https://github.com/stebesplace" target="_blank">Github</a></li>
+      		<li><a href="http://www.twitter.com/steve_place" target="_blank">Twitter</a></li>
+      		<li><a href="http://www.steveplacephotography.com" target="_blank">Photography</a></li>
+    	</ul>
+  	</div>
+</header>
+<hr class="soften">
+<div class="marketing">
+	<h1>Client List</h1>
+	<p class="marketing-byline">An ever growing list of recently produced projects.</p>
+	<div class="row-fluid">
+		<div class="span4">
+			<h2>Massage Envy Cycling</h2>
+			<img class="small-bs-icon" src="assets/img/icon-css3.png" rel="tooltip" title="Styled with CSS3">
+			<img class="small-bs-icon" src="assets/img/icon-wp.png" rel="tooltip" title="Built on the Wordpress Platform">
+			<br><br>
+			<p>Massage Envy Cycling was a site born out of the need for a team to have a presence online in support of their partnerships. The obvious choice was to use <strong>Wordpress</strong> for a publishing platform to keep track of news, reports, calendars, and more. The team owner has the ability to run the entire website from not only a desktop, but also his phone.</p>
+			<a href="http://www.massageenvycycling.com" alt="Click to visit Massage Envy's Cycling Site" target="_blank">massageenvycycling.com</a>
+		</div>
+		<div class="span4">
+			<h2>Voce</h2>
+			<img class="small-bs-icon" src="assets/img/icon-html5.png" rel="tooltip" title="Made Awesome with HTML5">
+			<img class="small-bs-icon" src="assets/img/icon-css3.png" rel="tooltip" title="Styled with CSS3">
+			<img class="small-bs-icon" src="assets/img/icon-wp.png" rel="tooltip" title="Built on the Wordpress Platform">
+			<img class="small-bs-icon" src="assets/img/icon-jquery.png" rel="tooltip" title="Structured with JQuery">
+			<br><br>
+			<p>Voce is a unique concept for marketing to target groups through social media tasks. A user must perform certain tasks on social media websites paid. The user has their own login, digital profile, tracking, and points awarded to their account for completing tasks which are converted to cash. All handled through <strong>Wordpress</strong>. It's pretty awesome actually.</p>
+			<a href="http://www.vocellc.com" alt="Click to visit Voce" target="_blank">vocellc.com</a>
+		</div>
+		<div class="span4">
+			<h2>Commit Co-op</h2>
+			<img class="small-bs-icon" src="assets/img/icon-html5.png" rel="tooltip" title="Made Awesome with HTML5">
+			<img class="small-bs-icon" src="assets/img/icon-css3.png" rel="tooltip" title="Styled with CSS3">
+			<img class="small-bs-icon" src="assets/img/icon-boot.png" rel="tooltip" title="Themed by Bootstrap">
+			<img class="small-bs-icon" src="assets/img/icon-wp.png" rel="tooltip" title="Built on the Wordpress Platform">
+			<img class="small-bs-icon" src="assets/img/icon-jquery.png" rel="tooltip" title="Structured with JQuery">
+			<br><br>
+			<p>Commit is an organization doing amazing things. They are on a mission to change the world one business at a time spreading the word about worker owned cooperatives. It's an inspiration really. The website we built is a cornerstone to the organization to generate funding, linked through PayPal, as well as an application based site for multiple platforms built on <strong>Wordpress</strong>.</p>
+			<a href="http://www.commit.coop" alt="Click to visit Commit" target="_blank">commit.coop</a>
+		</div>
+	</div>
+	<br>
+	<div class="row-fluid">
+		<div class="span4">
+			<h2>Christini AWD</h2>
+			<img class="small-bs-icon" src="assets/img/icon-css3.png" rel="tooltip" title="Styled with CSS3">
+			<img class="small-bs-icon" src="assets/img/icon-wp.png" rel="tooltip" title="Built on the Wordpress Platform">
+			<img class="small-bs-icon" src="assets/img/icon-jquery.png" rel="tooltip" title="Structured with JQuery">
+			<br><br>
+			<p>It's always been a dream for Steve Christini to build something with All Wheel Drive technology in it. And what do you know, he made a motorcycle! It's pretty awesome, and you should totally check out what's going on over there. The first redesign was back in 2008, and we decided to take this up a notch with a look and feel to match the brand for 2012.</p>
+			<a href="http://www.christini.com" alt="Click to visit Christini AWD" target="_blank">christini.com</a>
+		</div>
+		<div class="span4">
+			<h2>Broistas</h2>
+			<img class="small-bs-icon" src="assets/img/icon-html5.png" rel="tooltip" title="Made Awesome with HTML5">
+			<img class="small-bs-icon" src="assets/img/icon-css3.png" rel="tooltip" title="Styled with CSS3">
+			<img class="small-bs-icon" src="assets/img/icon-wp.png" rel="tooltip" title="Built on the Wordpress Platform">
+			<br><br>
+			<p>Like coffee? How about stand up comedy? No? Well, I tried. Meanwhile, you should really check out Tyler Kinney's comedy site about bro's, who make coffee. It's pretty damn funny, and honestly, worth the $0 cost of admission compared to 'Bucks where you'll shell out a lot more! The focus for the site was with the presentation of video, with some social integration.</p>
+			<a href="http://www.broistas.com" alt="Click to visit Broistas" target="_blank">broistas.com</a>
+		</div>
+		<div class="span4">
+			<h2>Kenda Pro Cycling</h2>
+			<img class="small-bs-icon" src="assets/img/icon-css3.png" rel="tooltip" title="Styled with CSS3">
+			<img class="small-bs-icon" src="assets/img/icon-wp.png" rel="tooltip" title="Built on the Wordpress Platform">
+			<br><br>
+			<p>When you've got a world class team of cyclists, who need a new home on the net, what better way than a flexible platform like <strong>Wordpress</strong>, for on the road publishing of news, stories, and race reports daily. That's just what we did, and now you too can follow the team as it travels the world climbing to the top of the podiums. Yeah, they're pretty badass.</p>
+			<a href="http://www.kendaprocycling.com" alt="Click to visit Kenda Pro Cycling\'s Site" target="_blank">kendaprocycling.com</a>
+		</div>
+	</div>
+	<br>
+	<div class="row-fluid">
+		<div class="span4">
+			<h2>Steve Place Photography</h2>
+			<img class="small-bs-icon" src="assets/img/icon-css3.png" rel="tooltip" title="Styled with CSS3">
+			<img class="small-bs-icon" src="assets/img/icon-wp.png" rel="tooltip" title="Built on the Wordpress Platform">
+			<img class="small-bs-icon" src="assets/img/icon-jquery.png" rel="tooltip" title="Structured with JQuery">
+			<br><br>
+			<p>Yup, this is my own personal photography site. When I'm not coding, or designing in Photoshop, I'm usually out trying to take some cool pictures, shoot a few weddings, or just experiment with something worthwhile. This is the 4th implementation of a photo site which has evolved tremendously over the years. I'm a fan of clean design, which is blatantly apparent when you visit the site which is build on <strong>Wordpress</strong> and <strong>JQuery</strong>.</p>
+			<a href="http://www.steveplacephotography.com" alt="Click to visit Steve Place Photography" target="_blank">steveplacephotography.com</a>
+		</div>
+		<div class="span4">
+			<h2>Solid Performance</h2>
+			<img class="small-bs-icon" src="assets/img/icon-css3.png" rel="tooltip" title="Styled with CSS3">
+			<img class="small-bs-icon" src="assets/img/icon-wp.png" rel="tooltip" title="Built on the Wordpress Platform">
+			<br><br>
+			<p>Solid Performance is a group outside of Philadelphia who specializes in motorcycle parts, building bikes, and creating the ultimate race machines. They have a large facility, and offer a lot as far as technology. We decided to go for a more traditional look and feel, easy to keep updated from the owners, and inviting for people looking for their services through <strong>Google Advertising</strong>.</p>
+			<a href="http://www.solid-performance.com" alt="Click to visit Solid Performance" target="_blank">solid-performance.com</a>
+		</div>
+		<div class="span4">
+			<h2>World Wildlife Fund</h2>
+			<img class="small-bs-icon" src="assets/img/icon-html5.png" rel="tooltip" title="Made Awesome with HTML5">
+			<img class="small-bs-icon" src="assets/img/icon-css3.png" rel="tooltip" title="Styled with CSS3">
+			<img class="small-bs-icon" src="assets/img/icon-jquery.png" rel="tooltip" title="Structured with JQuery">
+			<br><br>
+			<p>The WWF, no, not the wrestlers, needed a simple one page site for a particular campaign regarding a report for water management institutions. I had a previous portfolio site that used a clean <strong>HTML5</strong> layout, with a <strong>JQuery</strong> scrolling effect, and a few other cool popup effects. The page will grow over time, and eventually morph into a <strong>Wordpress</strong> site with a full feature set including dynamic mapping.</p>
+			<a href="http://www.adaptiveinstitutions.org" alt="Click to visit Adaptive Institutions" target="_blank">adaptiveinstitutions.org</a>
+		</div>
+	</div>
+</div>
+<footer class="footer">
+	<p class="pull-right"><a href="#">Back to top</a></p>
+	<p>Copyright &copy; 2012 Steve Place. All Rights Reserved.</p>
+</footer>
+</div>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<script src="assets/js/prettify.js"></script>
+<script src="assets/js/bootstrap-transition.js"></script>
+<script src="assets/js/bootstrap-alert.js"></script>
+<script src="assets/js/bootstrap-modal.js"></script>
+<script src="assets/js/bootstrap-dropdown.js"></script>
+<script src="assets/js/bootstrap-scrollspy.js"></script>
+<script src="assets/js/bootstrap-tab.js"></script>
+<script src="assets/js/bootstrap-tooltip.js"></script>
+<script src="assets/js/bootstrap-popover.js"></script>
+<script src="assets/js/bootstrap-button.js"></script>
+<script src="assets/js/bootstrap-collapse.js"></script>
+<script src="assets/js/bootstrap-carousel.js"></script>
+<script src="assets/js/bootstrap-typeahead.js"></script>
+<script src="assets/js/application.js"></script>
+<script src="assets/js/jquery.validate.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$('#get-a-quote').validate(
+			 {
+			  rules: {
+				name: {minlength: 2,required: true},
+				email: {email: true,required: true},
+				message: {required: true}				
+			  },
+			  highlight: function(label) {
+				$(label).closest('.control-group').addClass('error');
+			  },
+			  success: function(label) {
+				label
+				  .text('OK!').addClass('valid')
+				  .closest('.control-group').addClass('success');
+			  }
+		});
+	});
+</script>
+<script>
+	$(document).ready(function(){
+		$('#support-request').validate(
+			 {
+			  rules: {
+			  	fname: {required: true},
+			  	lname: {required: true},
+			  	email: {email: true,required: true},
+			  	phone: {required: true},
+			  	company: {minlength: 2,required: true},
+				message: {required: true}				
+			  },
+			  highlight: function(label) {
+				$(label).closest('.control-group').addClass('error');
+			  },
+			  success: function(label) {
+				label
+				  .text('OK!').addClass('valid')
+				  .closest('.control-group').addClass('success');
+			  }
+		});
+	});
+</script>
+<script src="http://malsup.github.com/jquery.form.js"></script> 
+<script> 
+	// wait for the DOM to be loaded 
+	$(document).ready(function() { 
+		$('#get-a-quote').ajaxForm(function() { 
+			document.getElementById('get-a-quote').innerHTML = '<h2>You rock!</h2><br> Thank\'s for contacting me, and look for a reply soon!<br><br><a href="#" class="btn" data-dismiss="modal">Close</a>';
+			$('#submit-quote').hide();
+		});
+		$('#support-request').ajaxForm(function() { 
+			document.getElementById('support-request').innerHTML = '<h2>Ticket Submitted</h2><br> Thank you for submitting a support ticket request. I review each ticket submitted and will respond accordingly via email or phone.<br><br>If you need immediate support, please call <strong>(610) 762-1473</strong>.<br><br><a href="#" class="btn" data-dismiss="modal">Close</a>';
+			$('#submit-support').hide();
+			$('.modal p').hide();
+		});
+	}); 
+</script> 
+</body>
+</html>
