@@ -9,7 +9,6 @@ Originally the site was based in Wordpress, though currently working outside of 
 
 <strong>8/6/2012:</strong>
 I used a modified version of the Boostrap Modal style to be more flexible with mobile browsers.
-<br><br>
 <pre>
 @media (max-width: 480px) 
 {
